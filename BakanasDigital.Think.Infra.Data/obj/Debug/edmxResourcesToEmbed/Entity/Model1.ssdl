@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="thinkModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TK_Cliente">
+    <Key>
+      <PropertyRef Name="ClienteID" />
+    </Key>
+    <Property Name="ClienteID" Type="bigint" Nullable="false" />
+    <Property Name="Nome" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="Sobrenome" Type="varchar" MaxLength="1000" Nullable="false" />
+    <Property Name="DataCadastro" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="thinkModelStoreContainer">
+    <EntitySet Name="TK_Cliente" EntityType="Self.TK_Cliente" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

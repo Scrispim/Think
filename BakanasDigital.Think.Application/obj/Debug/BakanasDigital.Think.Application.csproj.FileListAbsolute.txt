@@ -1,0 +1,16 @@
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\BakanasDigital.Think.Application.dll.config
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\BakanasDigital.Think.Application.dll
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\BakanasDigital.Think.Application.pdb
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\EntityFramework.dll
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\EntityFramework.SqlServer.dll
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\System.Data.SQLite.dll
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\EntityFramework.xml
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\EntityFramework.SqlServer.xml
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\System.Data.SQLite.xml
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\obj\Debug\BakanasDigital.Think.Application.csprojResolveAssemblyReference.cache
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\obj\Debug\BakanasDigital.Think.Application.dll
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\obj\Debug\BakanasDigital.Think.Application.pdb
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\BakanasDigital.Think.Domain.dll
+D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Application\bin\Debug\BakanasDigital.Think.Domain.pdb

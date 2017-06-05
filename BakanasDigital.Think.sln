@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Presentation", "0 - Presentation", "{B9E1B509-DDE3-4410-B6BE-10DCFC1DF0E5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Services", "1 - Services", "{07340F5F-E10C-40A4-BE7F-B607F6635A8D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Application", "2 - Application", "{DF6CE826-902F-4ED9-8F4D-1D334503AEF4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{08F91285-97A6-449B-A93A-A730A561AF27}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infra", "4 - Infra", "{50C01863-6215-4238-BB20-AB86ECB411B5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - CrossCutting", "4.1 - CrossCutting", "{C70B085D-98EB-4337-8D55-1D59A4B320E2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1 - Data", "4.1 - Data", "{E7E18AB7-95AE-4E50-B80A-026CD815A570}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakanasDigital.Think.Web", "BakanasDigital.Think.Web\BakanasDigital.Think.Web.csproj", "{EDD6062B-7D07-4F08-9159-F8A9691D2F5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakanasDigital.Think.Domain", "BakanasDigital.Think.Domain\BakanasDigital.Think.Domain.csproj", "{02A32460-1277-4A99-939A-CAD6F304984C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakanasDigital.Think.Infra.Data", "BakanasDigital.Think.Infra.Data\BakanasDigital.Think.Infra.Data.csproj", "{F5E4C974-BD40-4FFF-A721-D7581F906F25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BakanasDigital.Think.Application", "BakanasDigital.Think.Application\BakanasDigital.Think.Application.csproj", "{CAE3EA3D-0274-4168-A824-EC7AEAEC9CD2}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://santhercrispim.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BakanasDigital.Think.Web\\BakanasDigital.Think.Web.csproj
+		SccProjectTopLevelParentUniqueName1 = BakanasDigital.Think.sln
+		SccProjectName1 = BakanasDigital.Think.Web
+		SccLocalPath1 = BakanasDigital.Think.Web
+		SccProjectUniqueName2 = BakanasDigital.Think.Domain\\BakanasDigital.Think.Domain.csproj
+		SccProjectTopLevelParentUniqueName2 = BakanasDigital.Think.sln
+		SccProjectName2 = BakanasDigital.Think.Domain
+		SccLocalPath2 = BakanasDigital.Think.Domain
+		SccProjectUniqueName3 = BakanasDigital.Think.Infra.Data\\BakanasDigital.Think.Infra.Data.csproj
+		SccProjectTopLevelParentUniqueName3 = BakanasDigital.Think.sln
+		SccProjectName3 = BakanasDigital.Think.Infra.Data
+		SccLocalPath3 = BakanasDigital.Think.Infra.Data
+		SccProjectUniqueName4 = BakanasDigital.Think.Application\\BakanasDigital.Think.Application.csproj
+		SccProjectTopLevelParentUniqueName4 = BakanasDigital.Think.sln
+		SccProjectName4 = BakanasDigital.Think.Application
+		SccLocalPath4 = BakanasDigital.Think.Application
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDD6062B-7D07-4F08-9159-F8A9691D2F5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD6062B-7D07-4F08-9159-F8A9691D2F5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD6062B-7D07-4F08-9159-F8A9691D2F5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD6062B-7D07-4F08-9159-F8A9691D2F5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02A32460-1277-4A99-939A-CAD6F304984C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02A32460-1277-4A99-939A-CAD6F304984C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02A32460-1277-4A99-939A-CAD6F304984C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02A32460-1277-4A99-939A-CAD6F304984C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5E4C974-BD40-4FFF-A721-D7581F906F25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5E4C974-BD40-4FFF-A721-D7581F906F25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5E4C974-BD40-4FFF-A721-D7581F906F25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5E4C974-BD40-4FFF-A721-D7581F906F25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAE3EA3D-0274-4168-A824-EC7AEAEC9CD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAE3EA3D-0274-4168-A824-EC7AEAEC9CD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAE3EA3D-0274-4168-A824-EC7AEAEC9CD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAE3EA3D-0274-4168-A824-EC7AEAEC9CD2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C70B085D-98EB-4337-8D55-1D59A4B320E2} = {50C01863-6215-4238-BB20-AB86ECB411B5}
+		{E7E18AB7-95AE-4E50-B80A-026CD815A570} = {50C01863-6215-4238-BB20-AB86ECB411B5}
+		{EDD6062B-7D07-4F08-9159-F8A9691D2F5A} = {B9E1B509-DDE3-4410-B6BE-10DCFC1DF0E5}
+		{02A32460-1277-4A99-939A-CAD6F304984C} = {08F91285-97A6-449B-A93A-A730A561AF27}
+		{F5E4C974-BD40-4FFF-A721-D7581F906F25} = {E7E18AB7-95AE-4E50-B80A-026CD815A570}
+		{CAE3EA3D-0274-4168-A824-EC7AEAEC9CD2} = {DF6CE826-902F-4ED9-8F4D-1D334503AEF4}
+	EndGlobalSection
+EndGlobal
