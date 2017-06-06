@@ -12,3 +12,17 @@ D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Domain\bin\Debug\System.Dat
 D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Domain\obj\Debug\BakanasDigital.Think.Domain.dll
 D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Domain\obj\Debug\BakanasDigital.Think.Domain.pdb
 D:\Sistema\BakanasDigital.Think\BakanasDigital.Think.Domain\obj\Debug\BakanasDigital.Think.Domain.csprojResolveAssemblyReference.cache
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\BakanasDigital.Think.Domain.dll.config
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\BakanasDigital.Think.Domain.dll
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\BakanasDigital.Think.Domain.pdb
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\EntityFramework.dll
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\System.Data.SQLite.dll
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\System.Data.SQLite.EF6.dll
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\System.Data.SQLite.Linq.dll
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\EntityFramework.xml
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\Sistema\Think\BakanasDigital.Think.Domain\bin\Debug\System.Data.SQLite.xml
+D:\Sistema\Think\BakanasDigital.Think.Domain\obj\Debug\BakanasDigital.Think.Domain.csprojResolveAssemblyReference.cache
+D:\Sistema\Think\BakanasDigital.Think.Domain\obj\Debug\BakanasDigital.Think.Domain.dll
+D:\Sistema\Think\BakanasDigital.Think.Domain\obj\Debug\BakanasDigital.Think.Domain.pdb

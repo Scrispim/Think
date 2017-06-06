@@ -39,11 +39,13 @@
     <Compile Include="CartaoCreditoAppService.cs" />
     <Compile Include="CidadeAppService.cs" />
     <Compile Include="ClienteAppService.cs" />
+    <Compile Include="EnderecoInformacaoAppService.cs" />
     <Compile Include="EstadoAppService.cs" />
     <Compile Include="Interface\IAppServiceBase.cs" />
     <Compile Include="Interface\ICartaoCreditoAppService.cs" />
     <Compile Include="Interface\ICidadeAppService.cs" />
     <Compile Include="Interface\IClienteAppService.cs" />
+    <Compile Include="Interface\IEnderecoInformacaoAppService.cs" />
     <Compile Include="Interface\IEstadoAppService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

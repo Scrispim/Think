@@ -74,6 +74,7 @@ namespace BakanasDigital.Think.Web.App_Start
             kernel.Bind<ICidadeAppService>().To<CidadeAppService>();
             kernel.Bind<IEstadoAppService>().To<EstadoAppService>();
             kernel.Bind<ICartaoCreditoAppService>().To<CartaoCreditoAppService>();
+            kernel.Bind<IEnderecoInformacaoAppService>().To<EnderecoInformacaoAppService>();
             //kernel.Bind<IProdutoAppService>().To<ProdutoAppService>();
 
             kernel.Bind(typeof(IServiceBase<>)).To(typeof(ServiceBase<>));
@@ -81,6 +82,7 @@ namespace BakanasDigital.Think.Web.App_Start
             kernel.Bind<ICidadeService>().To<CidadeService>();
             kernel.Bind<IEstadoService>().To<EstadoService>();
             kernel.Bind<ICartaoCreditoService>().To<CartaoCreditoService>();
+            kernel.Bind<IEnderecoInformacaoService>().To<EnderecoInformacaoService>();
             //kernel.Bind<IProdutoService>().To<ProdutoService>();
 
             //Correto seria criar um módulo para não ter referencia do Data
@@ -89,6 +91,7 @@ namespace BakanasDigital.Think.Web.App_Start
             kernel.Bind<ICidadeRepository>().To<CidadeRepository>();
             kernel.Bind<IEstadoRepository>().To<EstadoRepository>();
             kernel.Bind<ICartaoCreditoRepository>().To<CartaoCreditoRepository>();
+            kernel.Bind<IEnderecoInformacaoRepository>().To<EnderecoInformacaoRepository>();
             //kernel.Bind<IProdutoRepository>().To<ProdutoRepository>();
         }        
     }
