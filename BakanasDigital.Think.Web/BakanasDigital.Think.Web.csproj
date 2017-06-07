@@ -170,6 +170,7 @@
     <Compile Include="Util\Constantes.cs" />
     <Compile Include="Util\Genero.cs" />
     <Compile Include="Util\Util.cs" />
+    <Compile Include="ViewModels\CadastroPFViewModel.cs" />
     <Compile Include="ViewModels\CartaoCreditoViewModel.cs" />
     <Compile Include="ViewModels\CidadeViewModel.cs" />
     <Compile Include="ViewModels\ClienteViewModel.cs" />

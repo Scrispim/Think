@@ -18,6 +18,7 @@ namespace BakanasDigital.Think.Web.AutoMapper
 
         protected void Configure()
         {
+            //CreateMap<CadastroPFViewModel, Cliente>();
             CreateMap<ClienteViewModel, Cliente>();
             CreateMap<CidadeViewModel, Cidade>();
             CreateMap<EstadoViewModel, Estado>();
@@ -26,7 +27,7 @@ namespace BakanasDigital.Think.Web.AutoMapper
 
             Mapper.Initialize(x =>
             {
-
+                //x.CreateMap<CadastroPFViewModel, Cliente>();
                 x.CreateMap<ClienteViewModel, Cliente>();
                 x.CreateMap<CidadeViewModel, Cidade>();
                 x.CreateMap<EstadoViewModel, Estado>();

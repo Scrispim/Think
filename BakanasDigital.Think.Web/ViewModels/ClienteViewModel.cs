@@ -63,9 +63,9 @@ namespace BakanasDigital.Think.Web.ViewModels
         
         [Required(ErrorMessage = "Preencha o campo como gostaria de ser tratado")]
         [DisplayName("Como gostaria de ser tratado(a)?")]
-        public int? ComoSerTratadoID { get; set; }
+        public int ComoSerTratadoID { get; set; }
 
-        [Required(ErrorMessage = "Preencha o campo como gostaria de ser tratado")]
+        [Required(ErrorMessage = "Preencha o campo como gostaria de ser tratado descrição")]
         [DisplayName("Descrição?")]
         public string ComoSerTratadoDescricao { get; set; }
 

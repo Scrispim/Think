@@ -57,15 +57,17 @@ namespace BakanasDigital.Think.Web.Controllers
         // POST: Clientes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(ClienteViewModel p_ClienteViewModel)
+        public ActionResult Create(CadastroPFViewModel p_ClienteViewModel)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    p_ClienteViewModel.DataCadastro = DateTime.Now;
+                    var v_ClienteViewModel = p_ClienteViewModel.Cliente;
 
-                    var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(p_ClienteViewModel);
+                    v_ClienteViewModel.DataCadastro = DateTime.Now;
+
+                    var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(v_ClienteViewModel);
 
 
                     _ClienteAppService.Add(clienteDomain);
@@ -84,8 +86,14 @@ namespace BakanasDigital.Think.Web.Controllers
         // GET: Clientes/Edit/5
         public ActionResult Edit(int id)
         {
+            CadastroPFViewModel v_Cadastro = new CadastroPFViewModel();
+
             var cliente = _ClienteAppService.GetById(id);
             var clienteViewModel = Mapper.Map<Cliente, ClienteViewModel>(cliente);
+
+            var v_CartaoCredito = _CartaoCreditoAppService.GetById(2);
+            var v_CartaoViewModel = Mapper.Map<CartaoCredito, CartaoCreditoViewModel>(v_CartaoCredito);
+                        
 
             ViewBag.GeneroID = new SelectList(Util.Util.ListGenero(), "Value", "Text", clienteViewModel.GeneroID);
             ViewBag.ComoSerTratadoID = new SelectList(Util.Util.ListComoTratar(), "Value", "Text", clienteViewModel.ComoSerTratadoID);
@@ -93,25 +101,35 @@ namespace BakanasDigital.Think.Web.Controllers
             ViewBag.EstadoID = new SelectList(_EstadoAppService.GetAll(), "EstadoID", "Descricao", cliente.EstadoID);
             ViewBag.ComplementoID = new SelectList(Util.Util.ListComplemento(), "Value", "Text", cliente.ComplementoID);
 
-            return View(clienteViewModel);
+            v_Cadastro.Cliente = clienteViewModel;
+            v_Cadastro.CartaoCredito = v_CartaoViewModel;
+
+            return View(v_Cadastro);
         }
 
         // POST: Clientes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(ClienteViewModel cliente)
+        public ActionResult Edit(CadastroPFViewModel p_Cadastro)
         {
             if(ModelState.IsValid)
             {
-                var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(cliente);
+                var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(p_Cadastro.Cliente);
                 _ClienteAppService.Update(clienteDomain);
+
+                var cartaoDomain = Mapper.Map<CartaoCreditoViewModel, CartaoCredito>(p_Cadastro.CartaoCredito);
+                _CartaoCreditoAppService.Update(cartaoDomain);
+
+                return RedirectToAction("Index");
             }
 
-            ViewBag.GeneroID = new SelectList(Util.Util.ListGenero(), "Value", "Text", cliente.GeneroID);
-            ViewBag.ComoSerTratadoID = new SelectList(Util.Util.ListComoTratar(), "Value", "Text", cliente.ComoSerTratadoID);
-            ViewBag.ComplementoID = new SelectList(Util.Util.ListComplemento(), "Value", "Text", cliente.ComplementoID);
+            ViewBag.GeneroID = new SelectList(Util.Util.ListGenero(), "Value", "Text", p_Cadastro.Cliente.GeneroID);
+            ViewBag.ComoSerTratadoID = new SelectList(Util.Util.ListComoTratar(), "Value", "Text", p_Cadastro.Cliente.ComoSerTratadoID);
+            ViewBag.ComplementoID = new SelectList(Util.Util.ListComplemento(), "Value", "Text", p_Cadastro.Cliente.ComplementoID);
+            ViewBag.CidadeID = new SelectList(_CidadeAppService.GetAll(), "CidadeID", "Descricao", p_Cadastro.Cliente.CidadeID);
+            ViewBag.EstadoID = new SelectList(_EstadoAppService.GetAll(), "EstadoID", "Descricao", p_Cadastro.Cliente.EstadoID);
 
-            return View(cliente);
+            return View(p_Cadastro);
         }
 
         // GET: Clientes/Delete/5
