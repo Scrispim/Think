@@ -9,5 +9,6 @@ namespace BakanasDigital.Think.Domain.Interfaces.Repositories
 {
     public interface ICartaoCreditoRepository : IRepositoryBase<CartaoCredito>
     {
+        IEnumerable<CartaoCredito> GetByClienteID(int p_ClienteID);
     }
 }

@@ -19,5 +19,10 @@ namespace BakanasDigital.Think.Domain.Services
             _Repository = repository;
         }
 
+        public IEnumerable<CartaoCredito> GetByClienteID(int p_ClienteID)
+        {
+            return _Repository.GetByClienteID(p_ClienteID);
+        }
+
     }
 }

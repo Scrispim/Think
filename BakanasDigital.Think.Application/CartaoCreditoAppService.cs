@@ -19,5 +19,10 @@ namespace BakanasDigital.Think.Application
             _Service = service;
         }
 
+        public IEnumerable<CartaoCredito> GetByClienteID(int p_ClienteID)
+        {
+            return _Service.GetByClienteID(p_ClienteID);
+        }
+
     }
 }

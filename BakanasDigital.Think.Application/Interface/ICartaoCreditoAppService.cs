@@ -9,5 +9,6 @@ namespace BakanasDigital.Think.Application.Interface
 {
     public interface ICartaoCreditoAppService : IAppServiceBase<CartaoCredito>
     {
+        IEnumerable<CartaoCredito> GetByClienteID(int p_ClienteID);
     }
 }

@@ -18,7 +18,6 @@ namespace BakanasDigital.Think.Web.Util
         public static IList<SelectListItem> ListGenero()
         {
             IList<SelectListItem> v_List = new List<SelectListItem>();
-            v_List.Add(new SelectListItem { Value = "0", Text = " " });
             v_List.Add(new SelectListItem { Value = Constantes.Genero.GeneroID.MASCULINO.ToString(), Text = Constantes.Genero.GeneroDescricao.MASCULINO });
             v_List.Add(new SelectListItem { Value = Constantes.Genero.GeneroID.FEMININO.ToString(), Text = Constantes.Genero.GeneroDescricao.FEMININO });
             v_List.Add(new SelectListItem { Value = Constantes.Genero.GeneroID.OUTRO.ToString(), Text = Constantes.Genero.GeneroDescricao.OUTRO });
@@ -29,7 +28,6 @@ namespace BakanasDigital.Think.Web.Util
         public static IList<SelectListItem> ListComoTratar()
         {
             IList<SelectListItem> v_List = new List<SelectListItem>();
-            v_List.Add(new SelectListItem { Value = "0", Text = " " });
             v_List.Add(new SelectListItem { Value = Constantes.ComoSerTratado.ComoSerTratadoID.SR.ToString(), Text = Constantes.ComoSerTratado.ComoSerTratadoDescricao.SR });
             v_List.Add(new SelectListItem { Value = Constantes.ComoSerTratado.ComoSerTratadoID.SRA.ToString(), Text = Constantes.ComoSerTratado.ComoSerTratadoDescricao.SRA });
             v_List.Add(new SelectListItem { Value = Constantes.ComoSerTratado.ComoSerTratadoID.DR.ToString(), Text = Constantes.ComoSerTratado.ComoSerTratadoDescricao.DRA });
@@ -43,7 +41,6 @@ namespace BakanasDigital.Think.Web.Util
         public static IList<SelectListItem> ListComplemento()
         {
             IList<SelectListItem> v_List = new List<SelectListItem>();
-            v_List.Add(new SelectListItem { Value = "0", Text = " " });
             v_List.Add(new SelectListItem { Value = Constantes.Complemento.ComplementoID.CASA.ToString(), Text = Constantes.Complemento.ComplementoDescricao.CASA});
             v_List.Add(new SelectListItem { Value = Constantes.Complemento.ComplementoID.APARTAMENTO.ToString(), Text = Constantes.Complemento.ComplementoDescricao.APARTAMENTO });
 

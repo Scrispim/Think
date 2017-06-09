@@ -1,8 +1,12 @@
 ﻿function CarregaMascaras()
 {
-    $("#TelefoneCelular").mask("(99)9999-9999");
-    $("#TelefoneFixo").mask("(99)9999-9999");
-    $("#Cep").mask("99.999-999");
+    $("#Cliente_TelefoneCelular").mask("(99)9999-9999");
+    $("#Cliente_TelefoneFixo").mask("(99)9999-9999");
+    $("#Cliente_Cep").mask("99.999-999");
+
+    $("#Cliente_Cpf").mask("999.999.999-99");
+    $("#Cliente_NumeroIdentidade").mask("9.999.999");
+    $("#CartaoCredito_Numero").mask("9999.9999.9999.9999");
     //
 }
 
@@ -26,31 +30,31 @@ function ComoSerTratado()
     });
 }
 
-$("#Cep").keyup(function (event) {
+$("#Cliente_Cep").keyup(function (event) {
     getEndereco();
 });
 
 function getEndereco() {
     // Se o campo CEP não estiver vazio
-    if ($.trim($("#Cep").val()) != "") {
+    if ($.trim($("#Cliente_Cep").val()) != "") {
 
         http: //cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+$("#cep").val()
 
 
-            $.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep=" + $("#Cep").val(), function () {
+            $.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep=" + $("#Cliente_Cep").val(), function () {
 
                 //Se o resultado for igual a 1
                 if (resultadoCEP["resultado"]) {
                     // troca o valor dos elementos
 
-                    $("#Endereco").val(unescape(resultadoCEP["tipo_logradouro"]) + ": " + unescape(resultadoCEP["logradouro"]));
-                    $("#Bairro").val(unescape(resultadoCEP["bairro"]));
-                    $("#CidadeID").val(unescape(resultadoCEP["cidade"]));
+                    $("#Cliente_Endereco").val(unescape(resultadoCEP["tipo_logradouro"]) + ": " + unescape(resultadoCEP["logradouro"]));
+                    $("#Cliente_Bairro").val(unescape(resultadoCEP["bairro"]));
+                    $("#Cliente_CidadeID").val(unescape(resultadoCEP["cidade"]));
 
-                    //var dropdown = document.getElementById('#EstadoID').options;
+                    //var dropdown = document.getElementById('#Cliente_EstadoID').options;
                     //for (var i = 0, L = dropdown.length; i < L; i++) {
                     //    if (dropdown[i].text == unescape(resultadoCEP["uf"])) {
-                    //        document.getElementById('#EstadoID').selectedIndex = i;
+                    //        document.getElementById('#Cliente_EstadoID').selectedIndex = i;
                     //        break;
                     //    }
                     //}

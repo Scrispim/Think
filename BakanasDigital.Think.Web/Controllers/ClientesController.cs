@@ -3,6 +3,7 @@ using BakanasDigital.Think.Application.Interface;
 using BakanasDigital.Think.Domain.Entities;
 using BakanasDigital.Think.Web.ViewModels;
 using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Web.Mvc;
 
@@ -49,7 +50,6 @@ namespace BakanasDigital.Think.Web.Controllers
             ViewBag.CidadeID = new SelectList(_CidadeAppService.GetAll(), "CidadeID", "Descricao");
             ViewBag.EstadoID = new SelectList(_EstadoAppService.GetAll(), "EstadoID", "Descricao");
             ViewBag.ComplementoID = new SelectList(Util.Util.ListComplemento(), "Value", "Text");
-            ViewBag.CartaoCredito = _CartaoCreditoAppService;
 
             return View();
         }
@@ -57,23 +57,42 @@ namespace BakanasDigital.Think.Web.Controllers
         // POST: Clientes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(CadastroPFViewModel p_ClienteViewModel)
+        public ActionResult Create(CadastroPFViewModel p_ClienteViewModel, FormCollection p_FormCollection)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    var v_ClienteViewModel = p_ClienteViewModel.Cliente;
+                    p_ClienteViewModel.Cliente.GeneroID = Convert.ToInt32(p_FormCollection["GeneroID"]);
+                    p_ClienteViewModel.Cliente.ComoSerTratadoID = Convert.ToInt32(p_FormCollection["ComoSerTratadoID"]);
+                    p_ClienteViewModel.Cliente.ComplementoID = Convert.ToInt32(p_FormCollection["ComplementoID"]);
+                    p_ClienteViewModel.Cliente.CidadeID = Convert.ToInt32(p_FormCollection["CidadeID"]);
+                    p_ClienteViewModel.Cliente.EstadoID = Convert.ToInt32(p_FormCollection["EstadoID"]);
+
+                    ClienteViewModel v_ClienteViewModel = p_ClienteViewModel.Cliente;
+
+                    CartaoCreditoViewModel v_CartaoViewModel = p_ClienteViewModel.CartaoCredito;
 
                     v_ClienteViewModel.DataCadastro = DateTime.Now;
+                    
 
-                    var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(v_ClienteViewModel);
+                    Cliente v_Cliente = Mapper.Map<ClienteViewModel, Cliente>(v_ClienteViewModel);
+                    CartaoCredito v_CartaoCredito = Mapper.Map<CartaoCreditoViewModel, CartaoCredito>(v_CartaoViewModel);
 
+                    _ClienteAppService.Add(v_Cliente);
 
-                    _ClienteAppService.Add(clienteDomain);
+                    v_CartaoViewModel.ClienteID = v_Cliente.ClienteID;
+
+                    _CartaoCreditoAppService.Add(v_CartaoCredito);
 
                     return RedirectToAction("Index");
                 }
+
+                ViewBag.GeneroID = new SelectList(Util.Util.ListGenero(), "Value", "Text", p_ClienteViewModel.Cliente.GeneroID);
+                ViewBag.ComoSerTratadoID = new SelectList(Util.Util.ListComoTratar(), "Value", "Text", p_ClienteViewModel.Cliente.ComoSerTratadoID);
+                ViewBag.ComplementoID = new SelectList(Util.Util.ListComplemento(), "Value", "Text", p_ClienteViewModel.Cliente.ComplementoID);
+                ViewBag.CidadeID = new SelectList(_CidadeAppService.GetAll(), "CidadeID", "Descricao", p_ClienteViewModel.Cliente.CidadeID);
+                ViewBag.EstadoID = new SelectList(_EstadoAppService.GetAll(), "EstadoID", "Descricao", p_ClienteViewModel.Cliente.EstadoID);
 
                 return View(p_ClienteViewModel);
             }
@@ -91,7 +110,7 @@ namespace BakanasDigital.Think.Web.Controllers
             var cliente = _ClienteAppService.GetById(id);
             var clienteViewModel = Mapper.Map<Cliente, ClienteViewModel>(cliente);
 
-            var v_CartaoCredito = _CartaoCreditoAppService.GetById(2);
+            var v_CartaoCredito = _CartaoCreditoAppService.GetByClienteID(cliente.ClienteID).FirstOrDefault();
             var v_CartaoViewModel = Mapper.Map<CartaoCredito, CartaoCreditoViewModel>(v_CartaoCredito);
                         
 
@@ -110,10 +129,17 @@ namespace BakanasDigital.Think.Web.Controllers
         // POST: Clientes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(CadastroPFViewModel p_Cadastro)
+        public ActionResult Edit(CadastroPFViewModel p_Cadastro, FormCollection p_FormCollection)
         {
             if(ModelState.IsValid)
             {
+                p_Cadastro.Cliente.GeneroID = Convert.ToInt32(p_FormCollection["GeneroID"]);
+                p_Cadastro.Cliente.ComoSerTratadoID = Convert.ToInt32(p_FormCollection["ComoSerTratadoID"]);
+                p_Cadastro.Cliente.ComplementoID = Convert.ToInt32(p_FormCollection["ComplementoID"]);
+                p_Cadastro.Cliente.CidadeID = Convert.ToInt32(p_FormCollection["CidadeID"]);
+                p_Cadastro.Cliente.EstadoID = Convert.ToInt32(p_FormCollection["EstadoID"]);
+
+                
                 var clienteDomain = Mapper.Map<ClienteViewModel, Cliente>(p_Cadastro.Cliente);
                 _ClienteAppService.Update(clienteDomain);
 
