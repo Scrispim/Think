@@ -23,6 +23,7 @@ namespace BakanasDigital.Think.Web.AutoMapper
             CreateMap<CidadeViewModel, Cidade>();
             CreateMap<EstadoViewModel, Estado>();
             CreateMap<CartaoCreditoViewModel, CartaoCredito>();
+            CreateMap<EnderecoInformacaoViewModel, EnderecoInformacao>();
             //Mapper.CreateMap<ProdutoViewModel, Produto>();
 
             Mapper.Initialize(x =>
@@ -32,6 +33,7 @@ namespace BakanasDigital.Think.Web.AutoMapper
                 x.CreateMap<CidadeViewModel, Cidade>();
                 x.CreateMap<EstadoViewModel, Estado>();
                 x.CreateMap<CartaoCreditoViewModel, CartaoCredito>();
+                x.CreateMap<EnderecoInformacaoViewModel, EnderecoInformacao>();
 
             });
 

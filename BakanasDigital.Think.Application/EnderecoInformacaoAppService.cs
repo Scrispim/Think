@@ -15,5 +15,10 @@ namespace BakanasDigital.Think.Application
             _service = service;
         }
 
+        public EnderecoInformacao GetByClienteID(int p_ClienteID)
+        {
+            return _service.GetByClienteID(p_ClienteID);
+        }
+
     }
 }

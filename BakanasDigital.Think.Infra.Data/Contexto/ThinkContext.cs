@@ -18,6 +18,7 @@ namespace BakanasDigital.Think.Infra.Data.Contexto
         public DbSet<Cidade> Cidades { get; set; }
         public DbSet<Estado> Estados { get; set; }
         public DbSet<CartaoCredito> CartaoCreditos { get; set; }
+        public DbSet<EnderecoInformacao> EnderecoInformacoes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

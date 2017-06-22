@@ -9,7 +9,26 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+
+<div class="row">
+@foreach (var item in Model) 
+{
+    <div class="col-md-4">
+        <div style="width:100%;">
+            <img id="ImagemPerfil_@item.ClienteId" class="ImagemPerfil" data-content="@item.ClienteId" src="" style="width:75%; border: 2px solid #000000; min-height: 230px;" />
+        </div>
+        <div style="width:100%; text-align: center; font-size: 25px;">
+            @Html.DisplayFor(modelItem => item.Nome) @Html.DisplayFor(modelItem => item.Sobrenome)
+        </div>
+        <div style="width:100%;  text-align: center; font-size: 22px;">
+            @Html.ActionLink("Edit", "Edit", new { id = item.ClienteId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ClienteId })
+        </div>
+    </div>
+   }
+</div>
+
+<table class="table" style="display:none">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Nome)
@@ -62,3 +81,19 @@
 }
 
 </table>
+
+@section Scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('.ImagemPerfil').each(function () {
+                
+                CarregaFotoPerfil($(this).attr("data-content"));
+            });
+
+            });        
+
+    </script>
+
+}

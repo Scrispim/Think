@@ -117,3 +117,22 @@ function VerificaCPF(cpf) {
             }
     }
 }
+
+function CarregaFotoPerfil(id) {
+
+    $.ajax({
+        method: "POST",
+        url: "/Clientes/GetImagemPerfil?p_ClienteId=" + id,
+        dataType: 'json',
+        contentType: false,
+        processData: false,
+        success: function (data) {
+            $("#ImagemPerfil_" + id).attr("src", data.responseText);
+            //alert('Cool, until here all is right!!!');
+        },
+        error: function (data) {
+            $("#ImagemPerfil_"+ id).attr("src", data.responseText);
+            //alert("Something worg was happed whem we try save the photo!" + data.responseText);
+        }
+    });
+}

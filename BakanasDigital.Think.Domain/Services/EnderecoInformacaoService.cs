@@ -15,5 +15,10 @@ namespace BakanasDigital.Think.Domain.Services
             _repository = repository;
         }
 
+        public EnderecoInformacao GetByClienteID(int p_ClienteID)
+        {
+            return _repository.GetByClienteID(p_ClienteID);
+        }
+
     }
 }

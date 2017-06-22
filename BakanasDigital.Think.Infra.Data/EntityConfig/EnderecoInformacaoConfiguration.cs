@@ -8,53 +8,56 @@ namespace BakanasDigital.Think.Infra.Data.EntityConfig
     {
         public EnderecoInformacaoConfiguration()
         {
-            HasKey(c => c.Endereco_InformacaoID);
+            HasKey(c => c.EnderecoInformacaoID);
 
-            Property(c => c.Total_Comodo)
+            Property(c => c.TotalComodo)
                 .IsRequired();
 
-            Property(c => c.Total_Banheiro)
+            Property(c => c.TotalBanheiro)
                 .IsRequired();
 
-            Property(c => c.Total_Metragem)
+            Property(c => c.TotalMetragem)
                 .IsRequired();
 
-            Property(c => c.Area_Lazer)
+            Property(c => c.AreaLazer)
                 .IsRequired();
 
             Property(c => c.Empregada)
                 .IsRequired();
 
-            Property(c => c.Total_Pessoa)
+            Property(c => c.TotalPessoa)
                 .IsRequired();
 
-            Property(c => c.Total_Idoso)
+            Property(c => c.TotalIdoso)
                 .IsRequired();
 
-            Property(c => c.Total_Crianca)
+            Property(c => c.TotalCrianca)
                 .IsRequired();
 
             Property(c => c.Animal)
                 .IsRequired();
 
-            Property(c => c.Animal_Tipo)
+            Property(c => c.AnimalTipo)
                 .HasMaxLength(1000)
                 .IsRequired();
 
-            Property(c => c.Animal_Nome)
+            Property(c => c.AnimalNome)
                 .HasMaxLength(1000)
                 .IsRequired();
 
-            Property(c => c.Prestacao_Servico_Horario)
+            Property(c => c.PrestacaoServicoHorario)
                 .HasMaxLength(500)
                 .IsRequired();
 
-            Property(c => c.Cuidado_Especial)
+            Property(c => c.CuidadoEspecial)
                 .HasMaxLength(1000)
                 .IsRequired();
 
-            Property(c => c.Informacao_Residencia)
+            Property(c => c.InformacaoResidencia)
                 .HasMaxLength(1000)
+                .IsRequired();
+
+            Property(c => c.ClienteID)
                 .IsRequired();
 
         }

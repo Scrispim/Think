@@ -43,6 +43,7 @@ namespace BakanasDigital.Think.Web.ViewModels
         [Required(ErrorMessage = "Preencha o campo data de nascimento")]
         [DisplayName("Data de nascimento")]
         [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime DataNascimento { get; set; }
 
         [Required(ErrorMessage = "Preencha o campo número identidade")]
